@@ -8,17 +8,27 @@ export type Tag = string;
 /** Broad buckets for the featured-work filter bar. Granular tags stay on the cards. */
 export type WorkCategory = "Robotics" | "Additive Manufacturing" | "Space Systems" | "Research";
 
+/** One headline number pulled from the case study, shown large on the card. */
+export interface CaseStudyMetric {
+  value: string;
+  label: string;
+}
+
 /** Card summary shown in the scannable grid for a featured case study. */
 export interface CaseStudyCard {
   slug: string;
   title: string;
   /** Role · context · date range line under the title. */
   subtitle: string;
-  /** The short blockquote paragraph shown on the card. */
+  /** Short, ~2-line blurb. Full detail lives in the case study's sections. */
   summary: string;
   tags: Tag[];
   /** Broad filter buckets this case study belongs to; a study can span more than one. */
   categories: WorkCategory[];
+  /** One standout number, shown large on the card for visual hierarchy. */
+  metric: CaseStudyMetric;
+  /** Organization this experience is affiliated with. Logo art arrives later. */
+  organization: string;
   /** VAACE only. Drives the larger card and richer case study layout. */
   flagship?: boolean;
 }
@@ -65,9 +75,15 @@ export interface OutreachEntry {
   description: string;
 }
 
+/** A single skill. caseStudySlugs links it to the case studies where it was actually used. */
+export interface SkillItem {
+  name: string;
+  caseStudySlugs?: string[];
+}
+
 export interface SkillGroup {
   category: string;
-  items: string[];
+  items: SkillItem[];
 }
 
 export interface SkillsData {

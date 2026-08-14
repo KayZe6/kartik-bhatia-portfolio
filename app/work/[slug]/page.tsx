@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/Container";
 import { Tag } from "@/components/Tag";
+import { OrgLogo } from "@/components/OrgLogo";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import { CaseStudyAside } from "@/components/CaseStudyAside";
 import { Reveal } from "@/components/Reveal";
@@ -51,9 +52,14 @@ export default async function CaseStudyPage({
 
       <Container className="mt-6">
         <Reveal>
-          <p className="text-xs font-medium tracking-widest text-rust uppercase">Case study</p>
-          <h1 className="mt-2 text-3xl font-semibold text-ink sm:text-4xl">{card.title}</h1>
-          <p className="mt-3 text-ink-muted">{card.subtitle}</p>
+          <div className="flex items-start gap-4">
+            <OrgLogo organization={card.organization} className="mt-1 h-12 w-12 text-sm" />
+            <div>
+              <p className="text-xs font-medium tracking-widest text-rust uppercase">Case study</p>
+              <h1 className="mt-2 text-3xl font-semibold text-ink sm:text-4xl">{card.title}</h1>
+              <p className="mt-3 text-ink-muted">{card.subtitle}</p>
+            </div>
+          </div>
           <ul className="mt-4 flex flex-wrap gap-2" aria-label="Skills and tools">
             {card.tags.map((tag) => (
               <li key={tag}>

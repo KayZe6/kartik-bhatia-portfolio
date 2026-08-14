@@ -4,6 +4,7 @@ import { achievements } from "@/data/achievements";
 import { Container } from "./Container";
 import { Reveal } from "./Reveal";
 import { SkillChip } from "./SkillChip";
+import { InteractiveSkillGroups } from "./InteractiveSkillGroups";
 
 export function SkillsSection() {
   return (
@@ -14,19 +15,8 @@ export function SkillsSection() {
         </Reveal>
 
         <Reveal delay={0.05}>
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {skills.groups.map((group) => (
-              <div key={group.category} className="rounded-xl border border-line bg-surface p-6">
-                <h3 className="text-sm font-semibold tracking-wide text-ink uppercase">{group.category}</h3>
-                <ul className="mt-4 flex flex-wrap gap-2" aria-label={`${group.category} skills`}>
-                  {group.items.map((item) => (
-                    <li key={item}>
-                      <SkillChip>{item}</SkillChip>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="mt-10">
+            <InteractiveSkillGroups groups={skills.groups} />
           </div>
         </Reveal>
 

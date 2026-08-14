@@ -10,8 +10,9 @@ export const caseStudies: CaseStudy[] = [
       slug: "vaace",
       title: "VAACE, Venus Aerobot for Atmospheric and Cloud Exploration",
       subtitle: "Chief Engineer · NASA seed-funded · Aug 2024 to Present",
-      summary:
-        "A Venus flight system that can repair its own membrane in-flight. Leading engineering across a 20+ person team spanning disciplines and institutions across the US. Last year the team flew its first scientific payload to 90,000 feet and recovered it intact with a full atmospheric and radiation data record.",
+      summary: "A Venus flight system that can repair its own membrane in-flight.",
+      metric: { value: "90,000 ft", label: "first scientific payload flown and recovered intact" },
+      organization: "NASA",
       tags: [
         "Systems Engineering",
         "SolidWorks",
@@ -64,7 +65,9 @@ export const caseStudies: CaseStudy[] = [
       title: "Terrapin Works, Advanced Fabrication Lab",
       subtitle: "Additive Manufacturing Technician · University of Maryland · Feb 2026 to Present",
       summary:
-        "Running production across most of the major 3D printing processes, from FDM and resin up to metal binder jetting, plus the metrology that checks whether parts came out to spec. A lot of the job is keeping machines alive.",
+        "Running production across most of the major 3D printing processes, from FDM and resin up to metal binder jetting.",
+      metric: { value: "11 machines", label: "run across FDM, resin, SLS, and metal binder jetting" },
+      organization: "University of Maryland",
       tags: [
         "FDM",
         "SLA",
@@ -105,7 +108,9 @@ export const caseStudies: CaseStudy[] = [
       title: "Multi-Robot Coordination Research",
       subtitle: "Undergraduate Research Assistant · CCRL, University of Maryland · Aug 2025 to Present",
       summary:
-        "Research on robotic swarms that divide work among themselves instead of taking orders from a central controller. Fixed the testbed faults that kept killing test runs, then built the decentralized allocation pipeline and the logging that made results comparable.",
+        "Research on robotic swarms that divide work among themselves instead of taking orders from a central controller.",
+      metric: { value: "15% faster", label: "than the centralized baseline across 40 trials" },
+      organization: "University of Maryland",
       tags: [
         "ROS2",
         "Gazebo",
@@ -147,7 +152,9 @@ export const caseStudies: CaseStudy[] = [
       title: "Space Copy Inc.",
       subtitle: "Robotics Mechanical Engineering Intern · Houston, TX · Jun 2025 to Aug 2025",
       summary:
-        "Robotics and simulation work for a company building lunar manufacturing hardware that turns regolith into usable structures. Worked on the end-effector, the simulation of the arm's motion, and part of the materials analysis behind site selection.",
+        "Robotics and simulation work for a company building lunar manufacturing hardware that turns regolith into usable structures.",
+      metric: { value: "7-DOF", label: "robotic arm mapped for pick-and-place" },
+      organization: "Space Copy",
       tags: [
         "SolidWorks",
         "ROS2",

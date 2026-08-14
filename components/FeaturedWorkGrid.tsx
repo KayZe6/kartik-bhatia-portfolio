@@ -27,10 +27,10 @@ export function FeaturedWorkGrid({ caseStudies }: { caseStudies: CaseStudy[] }) 
           type="button"
           onClick={() => setActiveCategory(null)}
           aria-pressed={activeCategory === null}
-          className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${
+          className={`cursor-pointer rounded-full border px-4 py-1.5 text-sm font-medium transition-all duration-150 ${
             activeCategory === null
               ? "border-rust bg-rust text-paper"
-              : "border-line bg-surface text-ink-muted hover:border-rust hover:text-rust"
+              : "border-line bg-surface text-ink-muted hover:border-rust hover:bg-rust-tint hover:text-rust hover:shadow-sm"
           }`}
         >
           All
@@ -43,10 +43,10 @@ export function FeaturedWorkGrid({ caseStudies }: { caseStudies: CaseStudy[] }) 
               type="button"
               onClick={() => setActiveCategory(isActive ? null : category)}
               aria-pressed={isActive}
-              className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${
+              className={`cursor-pointer rounded-full border px-4 py-1.5 text-sm font-medium transition-all duration-150 ${
                 isActive
                   ? "border-rust bg-rust text-paper"
-                  : "border-line bg-surface text-ink-muted hover:border-rust hover:text-rust"
+                  : "border-line bg-surface text-ink-muted hover:border-rust hover:bg-rust-tint hover:text-rust hover:shadow-sm"
               }`}
             >
               {category}
