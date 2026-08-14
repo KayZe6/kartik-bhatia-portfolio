@@ -22,8 +22,7 @@
   --color-rust-tint: #f4e4da;
   --color-line: #e2ded4;
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-archivo);
 }
 
 body {

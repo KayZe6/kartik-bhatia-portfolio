@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/Container";
+import { SiteHeader } from "@/components/SiteHeader";
 import { Tag } from "@/components/Tag";
 import { OrgLogo } from "@/components/OrgLogo";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
@@ -44,6 +45,7 @@ export default async function CaseStudyPage({
 
   return (
     <article>
+      <SiteHeader />
       <Container className="pt-10">
         <Link href="/" className="text-sm text-ink-muted hover:text-rust">
           ← Back to featured work
