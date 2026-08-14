@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { hero } from "@/data/hero";
 import { Container } from "./Container";
 import { Reveal } from "./Reveal";
@@ -21,27 +20,22 @@ export function Hero() {
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-navy-deep/80 via-navy-deep/35 to-navy-deep/85" />
 
         <div className="relative z-20 flex flex-1 flex-col">
-          <Container className="flex flex-col gap-5 py-8 sm:flex-row sm:items-center sm:justify-between sm:py-10">
-            <Link
-              href="/"
-              className="shrink-0 text-xl font-semibold tracking-wide text-paper no-underline hover:text-rust sm:text-2xl"
-            >
-              {hero.name}
-            </Link>
+          <Container className="flex justify-center py-8 sm:py-10">
             <SectionNav />
           </Container>
 
-          <div className="flex flex-1 items-center">
-            <Container>
-              <Reveal>
-                <h1 className="text-6xl leading-[0.95] font-black tracking-tight text-paper sm:text-8xl lg:text-9xl">
-                  {hero.name}
-                </h1>
-                <p className="mt-6 max-w-2xl text-lg font-medium text-paper/90 sm:text-2xl">
-                  {hero.identityLine}
-                </p>
-              </Reveal>
-            </Container>
+          <div className="flex flex-1 items-center justify-center px-6 text-center">
+            <Reveal className="flex flex-col items-center gap-6 sm:gap-8">
+              <p className="text-sm font-medium tracking-[0.3em] text-paper/70 uppercase sm:text-base">
+                {hero.eyebrow}
+              </p>
+              <h1 className="text-6xl leading-[0.95] font-black tracking-tight text-paper sm:text-8xl lg:text-9xl">
+                {hero.name}
+              </h1>
+              <p className="max-w-2xl text-lg font-medium text-paper/90 sm:text-2xl">
+                {hero.identityLine}
+              </p>
+            </Reveal>
           </div>
         </div>
       </section>

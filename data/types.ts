@@ -104,6 +104,8 @@ export interface Achievement {
 
 export interface HeroData {
   name: string;
+  /** Small kicker shown above the name in the video hero. */
+  eyebrow: string;
   identityLine: string;
   subLine: string;
   pillars: string[];

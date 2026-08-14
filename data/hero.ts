@@ -3,6 +3,7 @@ import type { HeroData } from "./types";
 /** S1 in the copy deck. */
 export const hero: HeroData = {
   name: "Kartik Bhatia",
+  eyebrow: "Engineering Portfolio",
   identityLine:
     "Engineering robotic space systems and the manufacturing that supports them, while working toward a career in human spaceflight.",
   subLine:
