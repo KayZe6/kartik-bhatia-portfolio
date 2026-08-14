@@ -117,6 +117,16 @@ export interface AboutData {
   paragraphs: string[];
 }
 
+export type TimelineStageStatus = "past" | "current" | "future";
+
+/** One stop on the About section's trajectory graphic. */
+export interface TimelineStage {
+  label: string;
+  detail?: string;
+  /** "current" gets the "I am here" marker; "future" renders open-ended (dashed, hollow). */
+  status: TimelineStageStatus;
+}
+
 export interface ContactData {
   heading: string;
   blurb: string;

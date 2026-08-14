@@ -25,7 +25,7 @@ export function Hero() {
           </Container>
 
           <div className="flex flex-1 items-center justify-center px-6 text-center">
-            <Reveal className="flex flex-col items-center gap-6 sm:gap-8">
+            <Reveal className="flex flex-col items-center gap-8 sm:gap-12 lg:gap-14">
               <p className="text-sm font-medium tracking-[0.3em] text-paper/70 uppercase sm:text-base">
                 {hero.eyebrow}
               </p>

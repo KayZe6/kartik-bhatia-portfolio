@@ -1,6 +1,7 @@
 import { about } from "@/data/about";
 import { Container } from "./Container";
 import { Reveal } from "./Reveal";
+import { AboutTimeline } from "./AboutTimeline";
 
 export function About() {
   return (
@@ -8,7 +9,16 @@ export function About() {
       <Container>
         <Reveal>
           <h2 className="text-3xl font-semibold text-ink sm:text-4xl">About</h2>
-          <div className="mt-6 flex flex-col gap-4 text-ink-muted">
+        </Reveal>
+
+        <Reveal delay={0.05}>
+          <div className="mt-10">
+            <AboutTimeline />
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <div className="mt-10 flex max-w-2xl flex-col gap-4 text-ink-muted">
             {about.paragraphs.map((paragraph, i) => (
               <p key={i}>{paragraph}</p>
             ))}
