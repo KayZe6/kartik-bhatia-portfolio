@@ -66,6 +66,7 @@ export interface SkillGroup {
 }
 
 export interface SkillsData {
+  heading: string;
   groups: SkillGroup[];
   currentlyLearning: string[];
 }

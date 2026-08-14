@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+ * Palette: deep navy through to a rust/Mars horizon, per the owner's banner.
+ * Committed to a single deliberate light theme (no auto dark-mode invert) so
+ * reading content stays predictable and readable. Navy is reserved for
+ * chrome (header/footer); body copy sits on a soft paper background.
+ */
+@theme {
+  --color-paper: #f7f5f1;
+  --color-surface: #ffffff;
+  --color-ink: #16213a;
+  --color-ink-muted: #56617a;
+  --color-navy: #16213a;
+  --color-navy-deep: #0b1526;
+  /* Darkened from the banner's #b5502f: that value cleared 4.5:1 on paper
+     (4.64:1) but not on rust-tint (4.08:1), where tags and asides sit. */
+  --color-rust: #a3482a;
+  --color-rust-tint: #f4e4da;
+  --color-line: #e2ded4;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  /* Body copy runs larger than the Tailwind default against the heading
+     scale; text-* utilities on headings/labels set their own size and
+     line-height, so this only reaches plain, unstyled paragraphs. */
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Visible, consistent keyboard focus everywhere, incl. inside cards/links. */
+:focus-visible {
+  outline: 2px solid var(--color-rust);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

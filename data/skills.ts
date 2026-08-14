@@ -2,6 +2,7 @@ import type { SkillsData } from "./types";
 
 /** S2 in the copy deck: the four skill categories plus "Currently learning". */
 export const skills: SkillsData = {
+  heading: "What I work with",
   groups: [
     {
       category: "Engineering",
