@@ -31,9 +31,12 @@ body {
   color: var(--color-ink);
   /* Body copy runs larger than the Tailwind default against the heading
      scale; text-* utilities on headings/labels set their own size and
-     line-height, so this only reaches plain, unstyled paragraphs. */
-  font-size: 20px;
-  line-height: 1.65;
+     line-height, so this only reaches plain, unstyled paragraphs.
+     Verified live at 20px/#3c4760 (8.53:1 on paper) before this pass —
+     still read as too small/light, so pushing further rather than
+     re-measuring the same values again. */
+  font-size: 22px;
+  line-height: 1.6;
 }
 
 /* Visible, consistent keyboard focus everywhere, incl. inside cards/links. */

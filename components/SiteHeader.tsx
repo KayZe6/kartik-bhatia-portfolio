@@ -15,15 +15,15 @@ const NAV_LINKS = [
 export function SiteHeader() {
   return (
     <header className="relative overflow-hidden bg-navy-deep text-paper">
-      <OrbitalArc className="pointer-events-none absolute inset-x-0 top-0 h-24 w-full text-paper" />
-      <Container className="relative flex items-center justify-between gap-6 py-5">
+      <OrbitalArc className="pointer-events-none absolute inset-0 h-full w-full text-paper" />
+      <Container className="relative flex flex-col gap-5 py-8 sm:flex-row sm:items-center sm:justify-between sm:py-10">
         <Link
           href="/"
-          className="shrink-0 text-sm font-medium tracking-wide text-paper no-underline hover:text-rust"
+          className="shrink-0 text-xl font-semibold tracking-wide text-paper no-underline hover:text-rust sm:text-2xl"
         >
           {hero.name}
         </Link>
-        <nav aria-label="Section navigation" className="flex gap-5 overflow-x-auto text-sm">
+        <nav aria-label="Section navigation" className="flex gap-6 overflow-x-auto text-base font-medium sm:gap-8">
           {NAV_LINKS.map((link) => (
             <Link key={link.href} href={link.href} className="shrink-0 text-paper/80 no-underline hover:text-rust">
               {link.label}

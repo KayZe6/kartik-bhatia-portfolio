@@ -2,21 +2,20 @@ import { MediaPlaceholder } from "./MediaPlaceholder";
 import { Tag } from "./Tag";
 import type { MinorProject } from "@/data/types";
 
+/**
+ * Uniform card shape for every minor project regardless of tier — the
+ * featured/compact split still lives in the data (it drives whether tags
+ * are shown) but no longer changes padding, type scale, or media presence.
+ */
 export function MinorProjectCard({ project }: { project: MinorProject }) {
-  const isFeatured = project.tier === "featured";
-
   return (
-    <div
-      className={`flex flex-col gap-3 rounded-xl border border-line bg-surface ${
-        isFeatured ? "p-6 sm:p-8" : "p-5"
-      }`}
-    >
-      {isFeatured && <MediaPlaceholder label={`${project.title} photo`} />}
+    <div className="flex flex-col gap-3 rounded-xl border border-line bg-surface p-6">
+      <MediaPlaceholder label={`${project.title} photo`} />
       <div>
-        <h3 className={`font-semibold text-ink ${isFeatured ? "text-xl" : "text-base"}`}>{project.title}</h3>
+        <h3 className="text-lg font-semibold text-ink">{project.title}</h3>
         <p className="mt-1 text-sm text-ink-muted">{project.subtitle}</p>
       </div>
-      <p className={isFeatured ? "text-ink-muted" : "text-sm text-ink-muted"}>{project.summary}</p>
+      <p className="text-sm text-ink-muted">{project.summary}</p>
       {project.tags && (
         <ul className="flex flex-wrap gap-2" aria-label="Skills and tools">
           {project.tags.map((tag) => (

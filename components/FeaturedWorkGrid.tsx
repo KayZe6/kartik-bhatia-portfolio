@@ -55,12 +55,14 @@ export function FeaturedWorkGrid({ caseStudies }: { caseStudies: CaseStudy[] }) 
         })}
       </div>
 
-      <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+      {/* 3 columns: the flagship spans all 3, and the 3 standard case studies
+          fill exactly one row underneath with no leftover gap. */}
+      <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
         {visibleStudies.map((study, i) => (
           <Reveal
             key={study.card.slug}
             delay={i * 0.05}
-            className={study.card.flagship ? "sm:col-span-2" : undefined}
+            className={study.card.flagship ? "sm:col-span-3" : undefined}
           >
             <CaseStudyCard card={study.card} />
           </Reveal>
