@@ -25,7 +25,7 @@ export function Hero() {
           </Container>
 
           <div className="flex flex-1 items-center justify-center px-6 text-center">
-            <Reveal className="flex flex-col items-center gap-8 sm:gap-12 lg:gap-14">
+            <Reveal className="flex flex-col items-center gap-10 sm:gap-16 lg:gap-20">
               <p className="text-sm font-medium tracking-[0.3em] text-paper/70 uppercase sm:text-base">
                 {hero.eyebrow}
               </p>
@@ -40,13 +40,13 @@ export function Hero() {
         </div>
       </section>
 
-      <Container className="py-12 sm:py-16">
+      <Container className="flex flex-col items-center py-12 text-center sm:py-16">
         <Reveal>
-          <p className="text-ink-muted">{hero.subLine}</p>
+          <p className="mx-auto max-w-2xl text-ink-muted">{hero.subLine}</p>
         </Reveal>
 
         <Reveal delay={0.1}>
-          <ul className="mt-10 flex flex-wrap gap-6" aria-label="Focus areas">
+          <ul className="mt-10 flex flex-wrap justify-center gap-6" aria-label="Focus areas">
             {hero.pillars.map((pillar) => {
               const Icon = PILLAR_ICONS[pillar];
               return (
@@ -60,9 +60,25 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <p className="mt-10 text-xs font-medium tracking-widest text-ink-muted uppercase">
-            {hero.affiliations.join(" · ")}
-          </p>
+          <ul
+            className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-5"
+            aria-label="Organizations and programs"
+          >
+            {hero.affiliations.map((logo) => (
+              <li
+                key={logo.src}
+                className="flex h-16 w-28 items-center justify-center rounded-lg bg-surface p-2"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element -- decorative logo strip, not a next/image LCP candidate */}
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  loading="lazy"
+                  className="h-full w-full object-contain opacity-60 grayscale"
+                />
+              </li>
+            ))}
+          </ul>
         </Reveal>
       </Container>
     </>

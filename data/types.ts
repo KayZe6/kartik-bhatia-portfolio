@@ -102,6 +102,12 @@ export interface Achievement {
   description: string;
 }
 
+/** One mark in the affiliation logo strip: a program, lab, school, or company patch/wordmark. */
+export interface AffiliationLogo {
+  src: string;
+  alt: string;
+}
+
 export interface HeroData {
   name: string;
   /** Small kicker shown above the name in the video hero. */
@@ -109,7 +115,7 @@ export interface HeroData {
   identityLine: string;
   subLine: string;
   pillars: string[];
-  affiliations: string[];
+  affiliations: AffiliationLogo[];
 }
 
 /** The human-beat About section. First person by design, unlike the rest of the site. */
