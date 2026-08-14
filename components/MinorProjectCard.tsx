@@ -1,3 +1,4 @@
+import { MediaPlaceholder } from "./MediaPlaceholder";
 import { Tag } from "./Tag";
 import type { MinorProject } from "@/data/types";
 
@@ -10,6 +11,7 @@ export function MinorProjectCard({ project }: { project: MinorProject }) {
         isFeatured ? "p-6 sm:p-8" : "p-5"
       }`}
     >
+      {isFeatured && <MediaPlaceholder label={`${project.title} photo`} />}
       <div>
         <h3 className={`font-semibold text-ink ${isFeatured ? "text-xl" : "text-base"}`}>{project.title}</h3>
         <p className="mt-1 text-sm text-ink-muted">{project.subtitle}</p>

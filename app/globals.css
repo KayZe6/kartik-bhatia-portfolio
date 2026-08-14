@@ -10,7 +10,10 @@
   --color-paper: #f7f5f1;
   --color-surface: #ffffff;
   --color-ink: #16213a;
-  --color-ink-muted: #56617a;
+  /* Darkened from #56617a (5.70:1 on paper) to #3c4760 (8.47:1 on paper) —
+     still visually distinct from --color-ink for hierarchy, but closer to
+     it than to the old value. */
+  --color-ink-muted: #3c4760;
   --color-navy: #16213a;
   --color-navy-deep: #0b1526;
   /* Darkened from the banner's #b5502f: that value cleared 4.5:1 on paper
@@ -29,8 +32,8 @@ body {
   /* Body copy runs larger than the Tailwind default against the heading
      scale; text-* utilities on headings/labels set their own size and
      line-height, so this only reaches plain, unstyled paragraphs. */
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 1.65;
 }
 
 /* Visible, consistent keyboard focus everywhere, incl. inside cards/links. */

@@ -22,6 +22,7 @@ export const caseStudies: CaseStudy[] = [
         "Electronics and Firmware",
         "Testing and Assembly",
       ],
+      categories: ["Space Systems", "Robotics", "Research"],
       flagship: true,
     },
     sections: [
@@ -73,6 +74,7 @@ export const caseStudies: CaseStudy[] = [
         "ROMER Arm Metrology",
         "Machine Troubleshooting and Maintenance",
       ],
+      categories: ["Additive Manufacturing"],
     },
     sections: [
       {
@@ -113,6 +115,7 @@ export const caseStudies: CaseStudy[] = [
         "Robot Hardware Debugging",
         "Data Logging and Analysis",
       ],
+      categories: ["Robotics", "Research"],
     },
     sections: [
       {
@@ -154,6 +157,7 @@ export const caseStudies: CaseStudy[] = [
         "Lunar Site Assessment",
         "Spectral Analysis",
       ],
+      categories: ["Robotics", "Additive Manufacturing", "Space Systems"],
     },
     sections: [
       {

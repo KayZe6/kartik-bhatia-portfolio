@@ -5,6 +5,9 @@
 
 export type Tag = string;
 
+/** Broad buckets for the featured-work filter bar. Granular tags stay on the cards. */
+export type WorkCategory = "Robotics" | "Additive Manufacturing" | "Space Systems" | "Research";
+
 /** Card summary shown in the scannable grid for a featured case study. */
 export interface CaseStudyCard {
   slug: string;
@@ -14,6 +17,8 @@ export interface CaseStudyCard {
   /** The short blockquote paragraph shown on the card. */
   summary: string;
   tags: Tag[];
+  /** Broad filter buckets this case study belongs to; a study can span more than one. */
+  categories: WorkCategory[];
   /** VAACE only. Drives the larger card and richer case study layout. */
   flagship?: boolean;
 }

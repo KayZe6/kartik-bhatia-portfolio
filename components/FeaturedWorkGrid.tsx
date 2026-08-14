@@ -1,56 +1,55 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { CaseStudyCard } from "./CaseStudyCard";
 import { Reveal } from "./Reveal";
-import type { CaseStudy } from "@/data/types";
+import type { CaseStudy, WorkCategory } from "@/data/types";
 
-/** Case study grid with client-side tag filtering, driven entirely by the data's own tags. */
+const CATEGORIES: WorkCategory[] = ["Robotics", "Additive Manufacturing", "Space Systems", "Research"];
+
+/**
+ * Case study grid with a small set of broad category filters. Granular
+ * per-project tags still show on each card; this bar just narrows which
+ * cards are visible, so it stays scannable regardless of how many tags
+ * the underlying case studies accumulate.
+ */
 export function FeaturedWorkGrid({ caseStudies }: { caseStudies: CaseStudy[] }) {
-  const [activeTag, setActiveTag] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState<WorkCategory | null>(null);
 
-  const allTags = useMemo(() => {
-    const set = new Set<string>();
-    for (const study of caseStudies) {
-      for (const tag of study.card.tags) set.add(tag);
-    }
-    return [...set].sort((a, b) => a.localeCompare(b));
-  }, [caseStudies]);
-
-  const visibleStudies = activeTag
-    ? caseStudies.filter((study) => study.card.tags.includes(activeTag))
+  const visibleStudies = activeCategory
+    ? caseStudies.filter((study) => study.card.categories.includes(activeCategory))
     : caseStudies;
 
   return (
     <div>
-      <div className="flex flex-wrap gap-2" role="group" aria-label="Filter case studies by skill">
+      <div className="flex flex-wrap gap-2" role="group" aria-label="Filter case studies by category">
         <button
           type="button"
-          onClick={() => setActiveTag(null)}
-          aria-pressed={activeTag === null}
-          className={`rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
-            activeTag === null
+          onClick={() => setActiveCategory(null)}
+          aria-pressed={activeCategory === null}
+          className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${
+            activeCategory === null
               ? "border-rust bg-rust text-paper"
               : "border-line bg-surface text-ink-muted hover:border-rust hover:text-rust"
           }`}
         >
           All
         </button>
-        {allTags.map((tag) => {
-          const isActive = activeTag === tag;
+        {CATEGORIES.map((category) => {
+          const isActive = activeCategory === category;
           return (
             <button
-              key={tag}
+              key={category}
               type="button"
-              onClick={() => setActiveTag(isActive ? null : tag)}
+              onClick={() => setActiveCategory(isActive ? null : category)}
               aria-pressed={isActive}
-              className={`rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
+              className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${
                 isActive
                   ? "border-rust bg-rust text-paper"
                   : "border-line bg-surface text-ink-muted hover:border-rust hover:text-rust"
               }`}
             >
-              {tag}
+              {category}
             </button>
           );
         })}
