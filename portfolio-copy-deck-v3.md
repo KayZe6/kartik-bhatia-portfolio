@@ -249,5 +249,5 @@ Team Lead · UMD Clark School of Engineering · Feb to May 2024
 - LinkedIn: linkedin.com/in/kartik-bhatia4
 - Résumé: [download PDF]
 
-**Footer credit:**
-> Built with Next.js, Tailwind, and Framer Motion, orchestrated with Claude Code.
+**Footer:**
+> © [current year] Kartik Bhatia. All rights reserved.

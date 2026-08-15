@@ -3,8 +3,10 @@ import { hero } from "@/data/hero";
 /**
  * Shows the logo(s) belonging to one experience, derived by matching href
  * against the affiliation strip's own data — no separate logo-to-experience
- * mapping to keep in sync. Some experiences (VAACE, CCRL) have more than
- * one logo; they're grouped together automatically.
+ * mapping to keep in sync. Some experiences (VAACE, CCRL) have more than one
+ * logo; a logo can also belong to more than one experience (e.g. a
+ * department logo covering both a project and an outreach role). Both are
+ * grouped/matched automatically off hrefs.
  */
 export function ExperienceLogos({
   href,
@@ -13,7 +15,7 @@ export function ExperienceLogos({
   href: string;
   logoClassName?: string;
 }) {
-  const logos = hero.affiliations.filter((logo) => logo.href === href);
+  const logos = hero.affiliations.filter((logo) => logo.hrefs.includes(href));
   if (logos.length === 0) return null;
 
   return (

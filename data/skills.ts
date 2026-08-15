@@ -2,10 +2,11 @@ import type { SkillsData } from "./types";
 
 /**
  * S2 in the copy deck: the four skill categories plus "Currently learning".
- * caseStudySlugs links a skill to the case studies where it was actually
- * used, driving the click-to-see-experience interaction in the Skills
- * section. Skills without a case study behind them (coursework, minor
- * projects, tools not yet applied in a featured study) simply omit it.
+ * caseStudySlugs and minorProjectSlugs link a skill to every experience
+ * where it was actually used (a skill can span several), driving the
+ * click-to-see-experience interaction in the Skills section. Skills without
+ * a linked experience (coursework, tools not yet applied anywhere featured)
+ * simply omit both.
  */
 export const skills: SkillsData = {
   heading: "What I work with",
@@ -35,25 +36,49 @@ export const skills: SkillsData = {
         { name: "Multi Jet Fusion", caseStudySlugs: ["terrapin-works"] },
         { name: "Binder Jetting", caseStudySlugs: ["terrapin-works"] },
         { name: "3D Scanning", caseStudySlugs: ["terrapin-works"] },
-        { name: "DMG Mori 5-axis CNC", minorProjectSlugs: ["terraformers-urc-rover-team"] },
-        { name: "Drill Mill", minorProjectSlugs: ["terraformers-urc-rover-team"] },
-        { name: "Lathe", minorProjectSlugs: ["terraformers-urc-rover-team"] },
-        { name: "Water Jet", minorProjectSlugs: ["terraformers-urc-rover-team"] },
-        { name: "Laser Cutting", minorProjectSlugs: ["terraformers-urc-rover-team"] },
+        {
+          name: "DMG Mori 5-axis CNC",
+          minorProjectSlugs: ["terraformers-urc-rover-team", "zero-pressure-aerobot"],
+          caseStudySlugs: ["terrapin-works", "vaace"],
+        },
+        {
+          name: "Drill Mill",
+          minorProjectSlugs: ["terraformers-urc-rover-team", "zero-pressure-aerobot"],
+          caseStudySlugs: ["terrapin-works", "vaace"],
+        },
+        {
+          name: "Lathe",
+          minorProjectSlugs: ["terraformers-urc-rover-team", "zero-pressure-aerobot"],
+          caseStudySlugs: ["terrapin-works", "vaace"],
+        },
+        {
+          name: "Water Jet",
+          minorProjectSlugs: ["terraformers-urc-rover-team", "zero-pressure-aerobot"],
+          caseStudySlugs: ["terrapin-works", "vaace"],
+        },
+        {
+          name: "Laser Cutting",
+          minorProjectSlugs: ["terraformers-urc-rover-team", "zero-pressure-aerobot"],
+          caseStudySlugs: ["terrapin-works", "vaace"],
+        },
       ],
     },
     {
       category: "Software",
       items: [
         { name: "SolidWorks", caseStudySlugs: ["vaace", "space-copy"] },
-        { name: "Fusion 360", minorProjectSlugs: ["lunar-suit-lighting-system"] },
-        { name: "Siemens NX", caseStudySlugs: ["vaace"] },
-        { name: "MATLAB", caseStudySlugs: ["ccrl"] },
+        {
+          name: "Fusion 360",
+          minorProjectSlugs: ["lunar-suit-lighting-system", "zero-pressure-aerobot"],
+          caseStudySlugs: ["vaace", "terrapin-works"],
+        },
+        { name: "Siemens NX", caseStudySlugs: ["vaace", "terrapin-works"] },
+        { name: "MATLAB", caseStudySlugs: ["ccrl", "vaace"] },
         { name: "Python", caseStudySlugs: ["ccrl"] },
-        { name: "C++", caseStudySlugs: ["ccrl"] },
+        { name: "C++", caseStudySlugs: ["ccrl", "vaace"] },
         { name: "ROS2", caseStudySlugs: ["ccrl", "space-copy"] },
-        { name: "IBM DOORS", caseStudySlugs: ["vaace"] },
-        { name: "Jira", caseStudySlugs: ["vaace"] },
+        { name: "IBM DOORS", caseStudySlugs: ["vaace"], minorProjectSlugs: ["matscan"] },
+        { name: "Jira", caseStudySlugs: ["vaace"], minorProjectSlugs: ["matscan"] },
         { name: "Ansys Fluent (CFD)", caseStudySlugs: ["space-copy"] },
         { name: "Ansys STK", caseStudySlugs: ["vaace"] },
         { name: "Geomagic X", caseStudySlugs: ["terrapin-works"] },
@@ -65,8 +90,8 @@ export const skills: SkillsData = {
         { name: "ROS2", caseStudySlugs: ["ccrl", "space-copy"] },
         { name: "Gazebo", caseStudySlugs: ["ccrl", "space-copy"] },
         { name: "NVIDIA Jetson", caseStudySlugs: ["vaace"] },
-        { name: "PyTorch", caseStudySlugs: ["ccrl"] },
-        { name: "OpenCV", caseStudySlugs: ["vaace"] },
+        { name: "PyTorch", caseStudySlugs: ["ccrl", "vaace"] },
+        { name: "OpenCV", caseStudySlugs: ["vaace", "ccrl"] },
         { name: "Edge Inference", caseStudySlugs: ["vaace"] },
       ],
     },

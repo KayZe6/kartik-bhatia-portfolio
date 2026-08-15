@@ -109,8 +109,14 @@ export interface Achievement {
 export interface AffiliationLogo {
   src: string;
   alt: string;
-  /** The experience this logo belongs to: a case study path, or a "#outreach-{slug}" / "#project-{slug}" anchor. */
-  href: string;
+  /**
+   * The experience(s) this logo belongs to: case study paths, and/or
+   * "#outreach-{slug}" / "#project-{slug}" anchors. Usually one; a logo that
+   * genuinely represents more than one experience (e.g. a department logo
+   * covering both a project and an outreach role) can list several. The
+   * strip's own click target is always the first entry.
+   */
+  hrefs: string[];
 }
 
 export interface HeroData {
@@ -156,5 +162,4 @@ export interface ContactData {
   linkedin: string;
   /** Placeholder path until the real PDF is wired in. */
   resumeUrl: string;
-  footerCredit: string;
 }

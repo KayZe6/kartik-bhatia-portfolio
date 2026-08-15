@@ -76,7 +76,7 @@ export function Hero() {
                     Dark-background logos aren't fixed by this — see the report
                     on which files those are. */}
                 <Link
-                  href={logo.href}
+                  href={logo.hrefs[0]}
                   className="flex h-full w-full items-center justify-center transition-transform duration-200 ease-out hover:scale-110"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element -- decorative logo strip, not a next/image LCP candidate */}

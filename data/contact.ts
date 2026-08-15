@@ -8,5 +8,4 @@ export const contact: ContactData = {
   email: "kbhatia4@terpmail.umd.edu",
   linkedin: "linkedin.com/in/kartik-bhatia4",
   resumeUrl: "/resume.pdf",
-  footerCredit: "Built with Next.js, Tailwind, and Framer Motion, orchestrated with Claude Code.",
 };
