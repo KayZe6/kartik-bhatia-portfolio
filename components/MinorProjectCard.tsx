@@ -12,7 +12,7 @@ export function MinorProjectCard({ project }: { project: MinorProject }) {
   return (
     <div id={`project-${project.slug}`} className="flex flex-col gap-3 rounded-xl border border-line bg-surface p-6">
       <MediaPlaceholder label={`${project.title} photo`} />
-      <div className="flex items-start gap-3">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:gap-3">
         <ExperienceLogos href={`/#project-${project.slug}`} logoClassName="h-9 w-9" />
         <div>
           <h3 className="text-lg font-semibold text-ink">{project.title}</h3>

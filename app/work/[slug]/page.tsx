@@ -54,8 +54,8 @@ export default async function CaseStudyPage({
 
       <Container className="mt-6">
         <Reveal>
-          <div className="flex items-start gap-4">
-            <ExperienceLogos href={`/work/${card.slug}`} logoClassName="mt-1 h-12 w-12" />
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
+            <ExperienceLogos href={`/work/${card.slug}`} logoClassName="sm:mt-1 h-12 w-12" />
             <div>
               <p className="text-xs font-medium tracking-widest text-rust uppercase">Case study</p>
               <h1 className="mt-2 text-3xl font-semibold text-ink sm:text-4xl">{card.title}</h1>

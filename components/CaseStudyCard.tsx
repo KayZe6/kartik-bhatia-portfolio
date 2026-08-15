@@ -31,7 +31,7 @@ export function CaseStudyCard({ card }: { card: CaseStudyCardData }) {
         className={isFlagship ? "sm:w-2/5 sm:shrink-0" : undefined}
       />
       <div className={`flex flex-col gap-4 ${isFlagship ? "sm:min-w-0 sm:flex-1" : "max-w-[36rem]"}`}>
-        <div className="flex items-start gap-3">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:gap-3">
           <ExperienceLogos href={`/work/${card.slug}`} />
           <div>
             <h3

@@ -17,7 +17,7 @@ export function OutreachSection() {
                 id={`outreach-${entry.slug}`}
                 className="flex h-full flex-col gap-2 rounded-xl border border-line bg-surface p-6"
               >
-                <div className="flex items-start gap-3">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:gap-3">
                   <ExperienceLogos href={`/#outreach-${entry.slug}`} logoClassName="h-9 w-9" />
                   <div>
                     <h3 className="font-semibold text-ink">{entry.title}</h3>
