@@ -127,14 +127,25 @@ export interface AboutData {
   paragraphs: string[];
 }
 
-export type TimelineStageStatus = "past" | "current" | "future";
-
 /** One stop on the About section's trajectory graphic. */
 export interface TimelineStage {
   label: string;
   detail?: string;
-  /** "current" gets the "I am here" marker; "future" renders open-ended (dashed, hollow). */
-  status: TimelineStageStatus;
+}
+
+/**
+ * The "I am here" position, floating on the connector line rather than
+ * attached to any one stage. Sits `progress` (0-1) of the way from stage
+ * `afterStageIndex` to the next stage.
+ */
+export interface TimelineMarker {
+  afterStageIndex: number;
+  progress: number;
+}
+
+export interface TimelineData {
+  stages: TimelineStage[];
+  marker: TimelineMarker;
 }
 
 export interface ContactData {
