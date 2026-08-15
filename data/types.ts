@@ -27,8 +27,6 @@ export interface CaseStudyCard {
   categories: WorkCategory[];
   /** One standout number, shown large on the card for visual hierarchy. */
   metric: CaseStudyMetric;
-  /** Organization this experience is affiliated with. Logo art arrives later. */
-  organization: string;
   /** VAACE only. Drives the larger card and richer case study layout. */
   flagship?: boolean;
 }
@@ -59,6 +57,8 @@ export interface CaseStudy {
 export type MinorProjectTier = "featured" | "compact";
 
 export interface MinorProject {
+  /** Stable id for the card, e.g. an affiliation logo linking to "#project-{slug}". */
+  slug: string;
   tier: MinorProjectTier;
   title: string;
   subtitle: string;
@@ -68,6 +68,8 @@ export interface MinorProject {
 }
 
 export interface OutreachEntry {
+  /** Stable id for the card, e.g. an affiliation logo linking to "#outreach-{slug}". */
+  slug: string;
   title: string;
   /** Organization or venue, when the copy deck lists one separately from the title. */
   org?: string;
@@ -106,6 +108,8 @@ export interface Achievement {
 export interface AffiliationLogo {
   src: string;
   alt: string;
+  /** The experience this logo belongs to: a case study path, or a "#outreach-{slug}" / "#project-{slug}" anchor. */
+  href: string;
 }
 
 export interface HeroData {

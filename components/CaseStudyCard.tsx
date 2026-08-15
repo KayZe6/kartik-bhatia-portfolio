@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MediaPlaceholder } from "./MediaPlaceholder";
-import { OrgLogo } from "./OrgLogo";
+import { ExperienceLogos } from "./ExperienceLogos";
 import { Tag } from "./Tag";
 import type { CaseStudyCard as CaseStudyCardData } from "@/data/types";
 
@@ -32,7 +32,7 @@ export function CaseStudyCard({ card }: { card: CaseStudyCardData }) {
       />
       <div className={`flex flex-col gap-4 ${isFlagship ? "sm:min-w-0 sm:flex-1" : "max-w-[36rem]"}`}>
         <div className="flex items-start gap-3">
-          <OrgLogo organization={card.organization} />
+          <ExperienceLogos href={`/work/${card.slug}`} />
           <div>
             <h3
               className={`font-semibold text-ink group-hover:text-rust ${

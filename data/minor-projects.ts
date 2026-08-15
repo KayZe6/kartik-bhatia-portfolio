@@ -6,6 +6,7 @@ import type { MinorProject } from "./types";
  */
 export const minorProjects: MinorProject[] = [
   {
+    slug: "zero-pressure-aerobot",
     tier: "featured",
     title: "Zero Pressure Aerobot",
     subtitle: "Prototyping Engineer · UMD Balloon Payload Program · Sep to Dec 2024",
@@ -14,6 +15,7 @@ export const minorProjects: MinorProject[] = [
     tags: ["Control Logic", "FDM 3D Printing", "Balloon Flight Operations"],
   },
   {
+    slug: "terraformers-urc-rover-team",
     tier: "featured",
     title: "Terraformers, URC Rover Team",
     subtitle: "Fabrication and Testing Engineer · Jan to Jun 2024",
@@ -22,6 +24,7 @@ export const minorProjects: MinorProject[] = [
     tags: ["CNC Machining", "Welding", "Structural Reinforcement", "Field Validation Testing"],
   },
   {
+    slug: "lunar-suit-lighting-system",
     tier: "compact",
     title: "Lunar Suit Lighting System",
     subtitle: "Integration and Test Engineer · UMD Space Systems Laboratory · Sep to Dec 2023",
@@ -29,6 +32,7 @@ export const minorProjects: MinorProject[] = [
       "Worked with a team of four to design and integrate a lighting system for a lunar suit prototype, using Fusion 360 for system performance and spatial alignment, plus hands-on fabrication, assembly, and testing of the subsystems and the final build.",
   },
   {
+    slug: "matscan",
     tier: "compact",
     title: "MATSCAN, Material Sensing, Classification, and Navigation",
     subtitle: "Team Lead · UMD Clark School of Engineering · Feb to May 2024",

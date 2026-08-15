@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { hero } from "@/data/hero";
 import { Container } from "./Container";
 import { Reveal } from "./Reveal";
@@ -74,13 +75,18 @@ export function Hero() {
                     so white source pixels just become the backdrop color).
                     Dark-background logos aren't fixed by this — see the report
                     on which files those are. */}
-                {/* eslint-disable-next-line @next/next/no-img-element -- decorative logo strip, not a next/image LCP candidate */}
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  loading="lazy"
-                  className="h-full w-full object-contain mix-blend-multiply"
-                />
+                <Link
+                  href={logo.href}
+                  className="flex h-full w-full items-center justify-center transition-transform duration-200 ease-out hover:scale-110"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element -- decorative logo strip, not a next/image LCP candidate */}
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    loading="lazy"
+                    className="h-full w-full object-contain mix-blend-multiply"
+                  />
+                </Link>
               </li>
             ))}
           </ul>

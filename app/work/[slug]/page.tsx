@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Container } from "@/components/Container";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Tag } from "@/components/Tag";
-import { OrgLogo } from "@/components/OrgLogo";
+import { ExperienceLogos } from "@/components/ExperienceLogos";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import { CaseStudyAside } from "@/components/CaseStudyAside";
 import { Reveal } from "@/components/Reveal";
@@ -55,7 +55,7 @@ export default async function CaseStudyPage({
       <Container className="mt-6">
         <Reveal>
           <div className="flex items-start gap-4">
-            <OrgLogo organization={card.organization} className="mt-1 h-12 w-12 text-sm" />
+            <ExperienceLogos href={`/work/${card.slug}`} logoClassName="mt-1 h-12 w-12" />
             <div>
               <p className="text-xs font-medium tracking-widest text-rust uppercase">Case study</p>
               <h1 className="mt-2 text-3xl font-semibold text-ink sm:text-4xl">{card.title}</h1>

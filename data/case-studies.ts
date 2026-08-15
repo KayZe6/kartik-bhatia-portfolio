@@ -12,7 +12,6 @@ export const caseStudies: CaseStudy[] = [
       subtitle: "Chief Engineer · NASA seed-funded · Aug 2024 to Present",
       summary: "A Venus flight system that can repair its own membrane in-flight.",
       metric: { value: "90,000 ft", label: "first scientific payload flown and recovered intact" },
-      organization: "NASA",
       tags: [
         "Systems Engineering",
         "SolidWorks",
@@ -67,7 +66,6 @@ export const caseStudies: CaseStudy[] = [
       summary:
         "Running production across most of the major 3D printing processes, from FDM and resin up to metal binder jetting.",
       metric: { value: "11 machines", label: "run across FDM, resin, SLS, and metal binder jetting" },
-      organization: "University of Maryland",
       tags: [
         "FDM",
         "SLA",
@@ -110,7 +108,6 @@ export const caseStudies: CaseStudy[] = [
       summary:
         "Research on robotic swarms that divide work among themselves instead of taking orders from a central controller.",
       metric: { value: "15% faster", label: "than the centralized baseline across 40 trials" },
-      organization: "University of Maryland",
       tags: [
         "ROS2",
         "Gazebo",
@@ -154,7 +151,6 @@ export const caseStudies: CaseStudy[] = [
       summary:
         "Robotics and simulation work for a company building lunar manufacturing hardware that turns regolith into usable structures.",
       metric: { value: "7-DOF", label: "robotic arm mapped for pick-and-place" },
-      organization: "Space Copy",
       tags: [
         "SolidWorks",
         "ROS2",
