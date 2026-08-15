@@ -61,20 +61,25 @@ export function Hero() {
 
         <Reveal delay={0.15}>
           <ul
-            className="mt-14 flex flex-wrap items-center justify-center gap-x-20 gap-y-16"
+            className="mt-16 flex flex-wrap items-center justify-center gap-x-24 gap-y-20"
             aria-label="Organizations and programs"
           >
             {hero.affiliations.map((logo) => (
               <li
                 key={logo.src}
-                className="flex h-28 w-48 items-center justify-center sm:h-36 sm:w-64 lg:h-40 lg:w-72"
+                className="flex h-36 w-64 items-center justify-center sm:h-44 sm:w-80 lg:h-52 lg:w-96"
               >
+                {/* Solid-white-background logos: multiply blend hides the white
+                    against the cream page (result = backdrop * source / 255,
+                    so white source pixels just become the backdrop color).
+                    Dark-background logos aren't fixed by this — see the report
+                    on which files those are. */}
                 {/* eslint-disable-next-line @next/next/no-img-element -- decorative logo strip, not a next/image LCP candidate */}
                 <img
                   src={logo.src}
                   alt={logo.alt}
                   loading="lazy"
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-contain mix-blend-multiply"
                 />
               </li>
             ))}
