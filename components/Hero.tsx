@@ -61,11 +61,14 @@ export function Hero() {
 
         <Reveal delay={0.15}>
           <ul
-            className="mt-12 flex flex-wrap items-center justify-center gap-x-14 gap-y-10"
+            className="mt-14 flex flex-wrap items-center justify-center gap-x-20 gap-y-16"
             aria-label="Organizations and programs"
           >
             {hero.affiliations.map((logo) => (
-              <li key={logo.src} className="flex h-32 w-56 items-center justify-center">
+              <li
+                key={logo.src}
+                className="flex h-28 w-48 items-center justify-center sm:h-36 sm:w-64 lg:h-40 lg:w-72"
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element -- decorative logo strip, not a next/image LCP candidate */}
                 <img
                   src={logo.src}
