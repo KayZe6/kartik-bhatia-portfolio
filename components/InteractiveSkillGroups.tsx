@@ -3,13 +3,15 @@
 import { useState } from "react";
 import Link from "next/link";
 import { caseStudies } from "@/data/case-studies";
+import { minorProjects } from "@/data/minor-projects";
 import type { SkillGroup, SkillItem } from "@/data/types";
 
 /**
- * Skill groups where each chip with a case-study link is clickable. Clicking
- * toggles a panel (rendered once, below the groups) listing the experiences
- * that used it. Kept self-contained to this section — it doesn't reach into
- * or alter the featured-work cards elsewhere on the page.
+ * Skill groups where each chip with a linked experience (case study or minor
+ * project) is clickable. Clicking toggles a panel (rendered once, below the
+ * groups) listing the experiences that used it. Kept self-contained to this
+ * section — it doesn't reach into or alter the featured-work cards elsewhere
+ * on the page.
  */
 export function InteractiveSkillGroups({ groups }: { groups: SkillGroup[] }) {
   const [activeSkill, setActiveSkill] = useState<SkillItem | null>(null);
@@ -19,8 +21,17 @@ export function InteractiveSkillGroups({ groups }: { groups: SkillGroup[] }) {
       ?.map((slug) => caseStudies.find((s) => s.card.slug === slug))
       .filter((s): s is NonNullable<typeof s> => Boolean(s)) ?? [];
 
+  const relatedProjects =
+    activeSkill?.minorProjectSlugs
+      ?.map((slug) => minorProjects.find((p) => p.slug === slug))
+      .filter((p): p is NonNullable<typeof p> => Boolean(p)) ?? [];
+
+  function isLinkedSkill(skill: SkillItem) {
+    return Boolean(skill.caseStudySlugs?.length || skill.minorProjectSlugs?.length);
+  }
+
   function handleClick(skill: SkillItem) {
-    if (!skill.caseStudySlugs?.length) return;
+    if (!isLinkedSkill(skill)) return;
     setActiveSkill((prev) => (prev?.name === skill.name ? null : skill));
   }
 
@@ -32,7 +43,7 @@ export function InteractiveSkillGroups({ groups }: { groups: SkillGroup[] }) {
             <h3 className="text-sm font-semibold tracking-wide text-ink uppercase">{group.category}</h3>
             <ul className="mt-4 flex flex-wrap gap-2" aria-label={`${group.category} skills`}>
               {group.items.map((skill) => {
-                const isLinked = Boolean(skill.caseStudySlugs?.length);
+                const isLinked = isLinkedSkill(skill);
                 const isActive = activeSkill?.name === skill.name;
                 return (
                   <li key={skill.name}>
@@ -65,7 +76,7 @@ export function InteractiveSkillGroups({ groups }: { groups: SkillGroup[] }) {
         ))}
       </div>
 
-      {activeSkill && relatedStudies.length > 0 && (
+      {activeSkill && (relatedStudies.length > 0 || relatedProjects.length > 0) && (
         <div className="mt-6 rounded-xl border border-rust bg-rust-tint p-6">
           <p className="text-xs font-medium tracking-widest text-rust uppercase">
             {activeSkill.name} — used in
@@ -78,6 +89,16 @@ export function InteractiveSkillGroups({ groups }: { groups: SkillGroup[] }) {
                   className="inline-flex items-center gap-1 text-ink underline decoration-rust/50 underline-offset-4 hover:text-rust"
                 >
                   {study.card.title} →
+                </Link>
+              </li>
+            ))}
+            {relatedProjects.map((project) => (
+              <li key={project.slug}>
+                <Link
+                  href={`/#project-${project.slug}`}
+                  className="inline-flex items-center gap-1 text-ink underline decoration-rust/50 underline-offset-4 hover:text-rust"
+                >
+                  {project.title} →
                 </Link>
               </li>
             ))}

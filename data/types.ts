@@ -77,10 +77,11 @@ export interface OutreachEntry {
   description: string;
 }
 
-/** A single skill. caseStudySlugs links it to the case studies where it was actually used. */
+/** A single skill. caseStudySlugs/minorProjectSlugs link it to the experiences where it was actually used. */
 export interface SkillItem {
   name: string;
   caseStudySlugs?: string[];
+  minorProjectSlugs?: string[];
 }
 
 export interface SkillGroup {
