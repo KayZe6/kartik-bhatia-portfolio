@@ -38,7 +38,7 @@ export function HeroVideo({ poster, src, className = "" }: HeroVideoProps) {
 
   return (
     <div className={`absolute inset-0 overflow-hidden bg-navy-deep ${className}`}>
-      {/* eslint-disable-next-line @next/next/no-img-element -- decorative placeholder SVG, not a photo needing next/image's pipeline */}
+      {/* eslint-disable-next-line @next/next/no-img-element -- decorative background photo; poster must paint immediately as plain HTML for LCP, not go through next/image's client pipeline */}
       <img src={poster} alt="" aria-hidden="true" loading="eager" className="h-full w-full object-cover" />
       {shouldPlayVideo && !videoFailed && (
         <video
@@ -46,7 +46,7 @@ export function HeroVideo({ poster, src, className = "" }: HeroVideoProps) {
           muted
           loop
           playsInline
-          preload="none"
+          preload="metadata"
           poster={poster}
           onError={() => setVideoFailed(true)}
           className="absolute inset-0 h-full w-full object-cover"

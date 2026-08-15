@@ -16,7 +16,7 @@ export function Hero() {
   return (
     <>
       <section className="relative flex h-dvh min-h-[600px] flex-col overflow-hidden bg-navy-deep text-paper">
-        <HeroVideo poster="/hero-poster.svg" src="/hero.mp4" />
+        <HeroVideo poster="/hero-poster.jpg" src="/hero.mp4" />
         {/* Dark enough at both ends to keep nav and name legible over any footage. */}
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-navy-deep/80 via-navy-deep/35 to-navy-deep/85" />
 
