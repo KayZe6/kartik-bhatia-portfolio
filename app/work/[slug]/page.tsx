@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { Tag } from "@/components/Tag";
 import { ExperienceLogos } from "@/components/ExperienceLogos";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import { MediaPhoto } from "@/components/MediaPhoto";
 import { CaseStudyAside } from "@/components/CaseStudyAside";
 import { Reveal } from "@/components/Reveal";
 import { caseStudies } from "@/data/case-studies";
@@ -78,8 +79,22 @@ export default async function CaseStudyPage({
             exact 16:9 box still reads as viewport-filling. */}
         <div className="mx-auto mt-8 flex max-w-3xl flex-col gap-10 pb-16">
           <Reveal delay={0.05}>
-            <MediaPlaceholder label={`${card.title} hero photo`} className="w-full" />
+            {card.media?.[0] ? (
+              <MediaPhoto media={card.media[0]} className="w-full" showCaption />
+            ) : (
+              <MediaPlaceholder label={`${card.title} hero photo`} className="w-full" />
+            )}
           </Reveal>
+
+          {card.media && card.media.length > 1 && (
+            <div className="flex flex-col gap-6">
+              {card.media.slice(1).map((item) => (
+                <Reveal key={item.src}>
+                  <MediaPhoto media={item} className="w-full" showCaption />
+                </Reveal>
+              ))}
+            </div>
+          )}
 
           {sections.map((section) => (
             <Reveal key={section.heading}>

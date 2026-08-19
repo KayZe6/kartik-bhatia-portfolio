@@ -24,6 +24,18 @@ export const caseStudies: CaseStudy[] = [
       ],
       categories: ["Space Systems", "Robotics", "Research"],
       flagship: true,
+      media: [
+        {
+          src: "/vaace-flight.webp",
+          alt: "Earth's curved horizon and cloud layer, photographed from the payload during its high-altitude balloon flight",
+          caption: "Captured from an onboard RunCam during our payload's flight",
+        },
+        {
+          src: "/vaace-patch.webp",
+          alt: "The VAACE mission patch next to a labeled concept illustration of the balloon, heat exchanger, and payload",
+          caption: "Our mission patch and concept design",
+        },
+      ],
     },
     sections: [
       {
@@ -76,6 +88,13 @@ export const caseStudies: CaseStudy[] = [
         "Machine Troubleshooting and Maintenance",
       ],
       categories: ["Additive Manufacturing"],
+      media: [
+        {
+          src: "/terrapin-shop.webp",
+          alt: "Industrial 3D printers, including the Desktop Metal Shop metal binder jetting system, inside the Terrapin Works fabrication lab",
+          caption: "Desktop Metal Shop - The metal 3D printing station",
+        },
+      ],
     },
     sections: [
       {
@@ -118,6 +137,13 @@ export const caseStudies: CaseStudy[] = [
         "Data Logging and Analysis",
       ],
       categories: ["Robotics", "Research"],
+      media: [
+        {
+          src: "/ccrl-coverage.webp",
+          alt: "Six small robots spread across a table displaying a colored coverage heatmap of the surveyed area",
+          caption: "Six robots sweeping a shared field, each guided by its own sense of where attention is needed",
+        },
+      ],
     },
     sections: [
       {
@@ -161,6 +187,13 @@ export const caseStudies: CaseStudy[] = [
         "Spectral Analysis",
       ],
       categories: ["Robotics", "Additive Manufacturing", "Space Systems"],
+      media: [
+        {
+          src: "/spacecopy-logo.webp",
+          alt: "The Space Copy company logo on a dark background",
+          caption: "Confidentiality note: Logo-only due to NDA",
+        },
+      ],
     },
     sections: [
       {

@@ -13,6 +13,13 @@ export const minorProjects: MinorProject[] = [
     summary:
       "A high-altitude balloon system built for near-space payload testing, flown to 60,000 ft carrying a 4 lb payload on a full-scale flight. Designed and 3D-printed structural components that held under 2% strain during ascent, extending flight duration by 25%, and programmed a cut-down mechanism with fail-safe logic that brought the payload down inside a 200 m landing radius.",
     tags: ["Control Logic", "FDM 3D Printing", "Balloon Flight Operations"],
+    media: [
+      {
+        src: "/zpb-flight.webp",
+        alt: "The zero-pressure balloon inflated and ascending during its full-scale flight test",
+        caption: "The zero-pressure balloon during a full-scale flight test",
+      },
+    ],
   },
   {
     slug: "terraformers-urc-rover-team",
@@ -22,6 +29,13 @@ export const minorProjects: MinorProject[] = [
     summary:
       "Fabrication and validation work on a 7 ft by 4 ft competition rover. Handled the CNC machining and welding to a ±0.5 mm tolerance, and owned the validation trials, confirming 5 m/s traversal over 2 ft obstacles across 50 km with no structural failures. Reinforced the chassis plates, cutting predicted bending stress by 35% and vibration amplitude by 25% under impact loads.",
     tags: ["CNC Machining", "Welding", "Structural Reinforcement", "Field Validation Testing"],
+    media: [
+      {
+        src: "/terraformers.webp",
+        alt: "The Terraformers URC competition rover",
+        caption: "The Terraformers competition rover",
+      },
+    ],
   },
   {
     slug: "lunar-suit-lighting-system",
@@ -30,6 +44,18 @@ export const minorProjects: MinorProject[] = [
     subtitle: "Integration and Test Engineer · UMD Space Systems Laboratory · Sep to Dec 2023",
     summary:
       "Worked with a team of four to design and integrate a lighting system for a lunar suit prototype, using Fusion 360 for system performance and spatial alignment, plus hands-on fabrication, assembly, and testing of the subsystems and the final build.",
+    media: [
+      {
+        src: "/suit-lit.webp",
+        alt: "The lunar suit's integrated lighting system illuminated during an underwater test in the Neutral Buoyancy pool",
+        caption: "The suit's lighting system lit up in a dark test environment across a Neutral Buoyancy pool",
+      },
+      {
+        src: "/suit-full.webp",
+        alt: "The full lunar suit prototype with the integrated lighting system",
+        caption: "The lunar suit prototype with the integrated lighting system",
+      },
+    ],
   },
   {
     slug: "matscan",
@@ -38,5 +64,12 @@ export const minorProjects: MinorProject[] = [
     subtitle: "Team Lead · UMD Clark School of Engineering · Feb to May 2024",
     summary:
       "Led a team of seven building an autonomous rover for material sensing and navigation. Oversaw the mechanical design, sensor integration, and the testing and assembly needed to validate that it worked.",
+    media: [
+      {
+        src: "/matscan.webp",
+        alt: "CAD render of the MATSCAN autonomous rover",
+        caption: "The MATSCAN autonomous rover, CAD render",
+      },
+    ],
   },
 ];

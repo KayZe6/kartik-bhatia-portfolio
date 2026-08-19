@@ -14,6 +14,13 @@ export interface CaseStudyMetric {
   label: string;
 }
 
+/** One photo. `caption` is optional display text; `alt` is always required for accessibility. */
+export interface MediaItem {
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
 /** Card summary shown in the scannable grid for a featured case study. */
 export interface CaseStudyCard {
   slug: string;
@@ -29,6 +36,12 @@ export interface CaseStudyCard {
   metric: CaseStudyMetric;
   /** VAACE only. Drives the larger card and richer case study layout. */
   flagship?: boolean;
+  /**
+   * media[0] is the card thumbnail and case study hero photo. Any further
+   * entries render as additional photos further down the case study page.
+   * Missing/empty falls back to a placeholder slot until real photos land.
+   */
+  media?: MediaItem[];
 }
 
 /** One heading + paragraphs block inside a case study's expanded body. */
@@ -65,6 +78,13 @@ export interface MinorProject {
   summary: string;
   /** Featured projects carry tags; compact ones don't per the copy deck. */
   tags?: Tag[];
+  /**
+   * media[0] is the card thumbnail. Any further entries are revealed by an
+   * expand toggle on the card rather than shown by default, keeping minor
+   * project cards compact. Missing/empty falls back to a placeholder slot
+   * until real photos land.
+   */
+  media?: MediaItem[];
 }
 
 export interface OutreachEntry {

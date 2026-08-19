@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MediaPlaceholder } from "./MediaPlaceholder";
+import { MediaPhoto } from "./MediaPhoto";
 import { ExperienceLogos } from "./ExperienceLogos";
 import { Tag } from "./Tag";
 import type { CaseStudyCard as CaseStudyCardData } from "@/data/types";
@@ -26,10 +27,14 @@ export function CaseStudyCard({ card }: { card: CaseStudyCardData }) {
         isFlagship ? "gap-6 p-8 sm:flex-row sm:items-start sm:gap-8 sm:p-10" : "gap-4 p-6 sm:p-8"
       }`}
     >
-      <MediaPlaceholder
-        label={`${card.title} photo`}
-        className={isFlagship ? "sm:w-2/5 sm:shrink-0" : undefined}
-      />
+      {card.media?.[0] ? (
+        <MediaPhoto media={card.media[0]} className={isFlagship ? "sm:w-2/5 sm:shrink-0" : undefined} />
+      ) : (
+        <MediaPlaceholder
+          label={`${card.title} photo`}
+          className={isFlagship ? "sm:w-2/5 sm:shrink-0" : undefined}
+        />
+      )}
       <div className={`flex flex-col gap-4 ${isFlagship ? "sm:min-w-0 sm:flex-1" : "max-w-[36rem]"}`}>
         <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:gap-3">
           <ExperienceLogos href={`/work/${card.slug}`} />
