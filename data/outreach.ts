@@ -7,7 +7,7 @@ export const outreach: OutreachEntry[] = [
     title: "Autodesk Design & Make Ambassador",
     dateRange: "Sep 2025 to Present",
     description:
-      "Runs outreach through Design & Make pop-up booths, demoing tools, supporting hands-on mini-builds, and answering questions to get more people interested in design. Also pitches to university classes and clubs to drive adoption and pull students into project-based challenges.",
+      "Run outreach through Design & Make pop-up booths, demoing tools, supporting hands-on mini-builds, and answering questions to get more people interested in design. Also pitches to university classes and clubs to drive adoption and pull students into project-based challenges.",
   },
   {
     slug: "nasa-lucy-mission-ambassador",

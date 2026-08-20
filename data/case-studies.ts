@@ -10,8 +10,8 @@ export const caseStudies: CaseStudy[] = [
       slug: "vaace",
       title: "VAACE, Venus Aerobot for Atmospheric and Cloud Exploration",
       subtitle: "Chief Engineer · NASA seed-funded · Aug 2024 to Present",
-      summary: "A Venus flight system that can repair its own membrane in-flight.",
-      metric: { value: "90,000 ft", label: "first scientific payload flown and recovered intact" },
+      summary: "A Venus flight system that autonomously repairs envelope damage in flight",
+      metric: { value: "90,000 ft", label: "Payload flown to near-space and recovered intact" },
       tags: [
         "Systems Engineering",
         "SolidWorks",
@@ -41,13 +41,16 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "The problem",
         body: [
-          "Venus has an atmospheric band in its cloud layer, roughly 50 to 55 km up, where the temperature and pressure are close to Earth's. That makes it one of the more realistic places to explore the planet up close, and variable-altitude balloons, called aerobots, are the usual way to reach it. The problem is that the same layer is full of sulfuric acid, and the constant thermal and mechanical cycling slowly breaks down the balloon's envelope. Once that envelope tears there is no way to fix it mid-flight, so most designs carry extra material and hope it holds. VAACE closes that gap by giving the aerobot a way to repair itself in place.",
+          "Venus has an atmospheric band in its cloud layer, roughly 50 to 55 km up, where the temperature and pressure are close to Earth's. That makes it one of the more realistic places to explore the planet up close, and variable-altitude balloons, called aerobots, are the usual way to reach it. The problem is that the same layer is full of sulfuric acid, and the constant thermal and mechanical cycling slowly breaks down the balloon's envelope. Once that envelope tears there is no way to fix it mid-flight, so most designs carry extra material and hope it holds. VAACE closes that gap with an onboard system that repairs the envelope in situ, without interrupting the in-flight operations.",
         ],
       },
       {
         heading: "Phase 1: what flew",
+        // First person is intentional in the second sentence below — a
+        // deliberate exception to the site's usual third-person case-study
+        // voice, called out specifically to own the Chief Engineer role.
         body: [
-          "Before touching the repair problem, the team needed to prove it could build something that survives near-space and comes back. An in-house built scientific payload flew to 27 km (90,000 ft) on a weather research balloon, ran for 3+ hours collecting temperature, pressure, CO2, radiation, and GPS data, and was recovered intact with a full data record. Assisted with the design of the payload assembly in SolidWorks, 3D-printed the housing and structural parts, and led flight operations on launch day.",
+          "Before touching the repair problem, the team needed to prove it could build something that survives near-space and comes back. An in-house built scientific payload flew to 27 km (90,000 ft) on a weather research balloon, ran for 3+ hours collecting temperature, pressure, CO2, radiation, and GPS data, and was recovered intact with a full data record. As Chief Engineer, I owned the technical direction across the team: I led and assisted with the design of the payload assembly in SolidWorks and manufacturing of the housing and structural parts, oversaw the electrical and software integration, produced the system diagrams, and ran the design reviews that gated each build. On launch day I led flight operations.",
           "Alongside Phase 1 flight ops, the team tested a phase-change buoyancy system using a helium-steam mix for altitude control. It produced measurable thermal cycling and a small altitude change, which identified buoyancy authority as the next thing to solve. The whole phase came in under a $10,000 budget.",
         ],
       },
@@ -76,14 +79,15 @@ export const caseStudies: CaseStudy[] = [
       title: "Terrapin Works, Advanced Fabrication Lab",
       subtitle: "Additive Manufacturing Technician · University of Maryland · Feb 2026 to Present",
       summary:
-        "Running production across most of the major 3D printing processes, from FDM and resin up to metal binder jetting.",
-      metric: { value: "11 machines", label: "run across FDM, resin, SLS, and metal binder jetting" },
+        "Running production across FDM, selective laser sintering, resin, metal binder jetting, and composites printing, plus the metrology that checks whether parts came out to spec. A lot of the job is keeping machines alive.",
+      metric: { value: "12 machines", label: "run across FDM, resin, SLS, metal binder jetting, and composites" },
       tags: [
         "FDM",
         "SLA",
         "SLS",
         "Multi Jet Fusion",
         "Binder Jetting",
+        "Continuous Fiber Reinforcement",
         "ROMER Arm Metrology",
         "Machine Troubleshooting and Maintenance",
       ],
@@ -106,7 +110,7 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "What I run",
         body: [
-          "Production runs across FDM (Stratasys Fortus 400mc, Bambu Lab X1C and P1S, Prusa Core One, XL, and MK3S), resin (Formlabs Form 4, Nexa XiP), SLS (Formlabs Fuse 1), Multi Jet Fusion (HP Jet Fusion 580), and metal binder jetting (Desktop Metal Shop System). Day to day that is slicing, setup, harvesting parts, and managing customer inventory. On the verification side, dimensional checks and 3D scanning with handheld scanners and the Hexagon ROMER Absolute Arm, working in Geomagic X, confirm parts conform before they go back to whoever ordered them.",
+          "Production runs across FDM (Stratasys Fortus 400mc, Bambu Lab X1C and P1S, Prusa Core One, XL, and MK3S), resin (Formlabs Form 4, Nexa XiP), SLS (Formlabs Fuse 1), Multi Jet Fusion (HP Jet Fusion 580), metal binder jetting (Desktop Metal Shop System), and composites on the Markforged Mark Two (continuous carbon-fiber reinforcement for composite parts as strong as machined aluminum). Day to day that is slicing, setup, harvesting parts, and managing customer inventory. On the verification side, dimensional checks and 3D scanning with handheld scanners and the Hexagon ROMER Absolute Arm, working in Geomagic X, confirm parts conform before they go back to whoever ordered them.",
         ],
       },
       {
@@ -199,7 +203,7 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "Context",
         body: [
-          "Space Copy builds rugged additive manufacturing systems for extreme environments, with the goal of turning lunar regolith into infrastructure. Their work runs on a NASA in-space manufacturing contract, and the company is a NASA LunaRecycle Phase-2 awardee. Contributed to the proposal effort behind that award.",
+          "Space Copy builds rugged additive manufacturing systems for extreme environments, with the goal of turning lunar regolith into infrastructure. The company develops in-space manufacturing systems for turning lunar regolith into infrastructure, and is a NASA LunaRecycle Phase-2 awardee. Contributed to the proposal effort behind that award.",
         ],
       },
       {

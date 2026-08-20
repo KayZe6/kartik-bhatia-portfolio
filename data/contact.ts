@@ -1,6 +1,6 @@
 import type { ContactData } from "./types";
 
-/** S6 in the copy deck. resumeUrl is a placeholder until the real PDF is provided. */
+/** S6 in the copy deck. resumeUrl points at the real PDF in public/. */
 export const contact: ContactData = {
   heading: "Get in touch",
   blurb:

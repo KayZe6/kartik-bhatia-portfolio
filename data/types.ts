@@ -180,6 +180,6 @@ export interface ContactData {
   blurb: string;
   email: string;
   linkedin: string;
-  /** Placeholder path until the real PDF is wired in. */
+  /** Path to the resume PDF in public/. */
   resumeUrl: string;
 }
