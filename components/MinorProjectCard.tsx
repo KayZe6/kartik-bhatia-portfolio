@@ -49,7 +49,7 @@ export function MinorProjectCard({ project }: { project: MinorProject }) {
             type="button"
             onClick={() => setExpanded((prev) => !prev)}
             aria-expanded={expanded}
-            className="self-start text-sm font-medium text-rust underline decoration-rust/50 underline-offset-4 hover:text-rust/80"
+            className="-my-1 flex min-h-[24px] items-center self-start py-1 text-sm font-medium text-rust underline decoration-rust/50 underline-offset-4 hover:text-rust/80"
           >
             {expanded ? "Show fewer photos" : `+${extraMedia.length} more photo${extraMedia.length > 1 ? "s" : ""}`}
           </button>

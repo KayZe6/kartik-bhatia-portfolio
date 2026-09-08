@@ -25,7 +25,7 @@ export async function generateMetadata({
   if (!study) return {};
 
   return {
-    title: `${study.card.title} — Kartik Bhatia`,
+    title: `${study.card.title} · Kartik Bhatia`,
     description: study.card.summary,
   };
 }
@@ -48,13 +48,19 @@ export default async function CaseStudyPage({
     <article>
       <SiteHeader />
       <Container className="pt-10">
-        <Link href="/" className="text-sm text-ink-muted hover:text-rust">
+        {/* min-h/py give this a 24px tap target (WCAG 2.2 target size). */}
+        <Link
+          href="/"
+          className="-my-1 inline-flex min-h-[24px] items-center py-1 text-sm text-ink-muted hover:text-rust"
+        >
           ← Back to featured work
         </Link>
       </Container>
 
       <Container className="mt-6">
-        <Reveal>
+        {/* Above the fold, so not revealed: a reveal holds this at opacity 0
+            until Framer hydrates, which delays LCP on a slow connection. */}
+        <div>
           <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
             <ExperienceLogos href={`/work/${card.slug}`} logoClassName="sm:mt-1 h-12 w-12" />
             <div>
@@ -70,7 +76,7 @@ export default async function CaseStudyPage({
               </li>
             ))}
           </ul>
-        </Reveal>
+        </div>
       </Container>
 
       <Container>
@@ -78,13 +84,11 @@ export default async function CaseStudyPage({
             rather than spanning the full container — at container width an
             exact 16:9 box still reads as viewport-filling. */}
         <div className="mx-auto mt-8 flex max-w-3xl flex-col gap-10 pb-16">
-          <Reveal delay={0.05}>
-            {card.media?.[0] ? (
-              <MediaPhoto media={card.media[0]} className="w-full" showCaption />
-            ) : (
-              <MediaPlaceholder label={`${card.title} hero photo`} className="w-full" />
-            )}
-          </Reveal>
+          {card.media?.[0] ? (
+            <MediaPhoto media={card.media[0]} className="w-full" showCaption priority />
+          ) : (
+            <MediaPlaceholder label={`${card.title} hero photo`} className="w-full" />
+          )}
 
           {card.media && card.media.length > 1 && (
             <div className="flex flex-col gap-6">

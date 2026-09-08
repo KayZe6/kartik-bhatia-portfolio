@@ -79,7 +79,7 @@ export function InteractiveSkillGroups({ groups }: { groups: SkillGroup[] }) {
       {activeSkill && (relatedStudies.length > 0 || relatedProjects.length > 0) && (
         <div className="mt-6 rounded-xl border border-rust bg-rust-tint p-6">
           <p className="text-xs font-medium tracking-widest text-rust uppercase">
-            {activeSkill.name} — used in
+            {activeSkill.name}, used in
           </p>
           <ul className="mt-3 flex flex-wrap gap-3">
             {relatedStudies.map((study) => (

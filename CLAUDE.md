@@ -69,4 +69,4 @@ Media arrives later. Build with placeholder slots and wire real assets in afterw
 - Build one full case study (VAACE) end-to-end first for review, then batch the rest off the same pattern.
 
 ## Workflow
-After making changes, always push the branch, open a pull request, and merge it into main so the change reaches production. Do not stop at pushing the branch.
+After making changes, always push the branch, open a pull request, and merge it into main so the change reaches production. Do not stop at pushing the branch. Exception: unless the change is large or I ask to review it first, in which case open the pull request and stop for my review.

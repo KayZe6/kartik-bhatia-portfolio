@@ -18,18 +18,18 @@ export const hero: HeroData = {
   // 100 TA role); any component that groups logos by experience derives
   // that from hrefs, not a separate mapping.
   affiliations: [
-    { src: "/1.png", alt: "VAACE mission patch", hrefs: ["/work/vaace"] },
-    { src: "/2.png", alt: "NASA", hrefs: ["/work/vaace"] },
+    { src: "/1.webp", alt: "VAACE mission patch", hrefs: ["/work/vaace"] },
+    { src: "/2.webp", alt: "NASA", hrefs: ["/work/vaace"] },
     { src: "/3.webp", alt: "NASA L'SPACE", hrefs: ["/work/vaace"] },
     { src: "/4.webp", alt: "Terrapin Works", hrefs: ["/work/terrapin-works"] },
     { src: "/5.webp", alt: "CCRL, Collaborative Controls and Robotics Lab", hrefs: ["/work/ccrl"] },
     { src: "/6.webp", alt: "Maryland Robotics Center", hrefs: ["/work/ccrl"] },
     {
-      src: "/7.png",
+      src: "/7.webp",
       alt: "Autodesk",
       hrefs: ["/#outreach-autodesk-design-make-ambassador"],
     },
-    { src: "/8.png", alt: "Space Copy", hrefs: ["/work/space-copy"] },
+    { src: "/8.webp", alt: "Space Copy", hrefs: ["/work/space-copy"] },
     {
       src: "/9.webp",
       alt: "NASA Lucy mission patch",
@@ -41,22 +41,22 @@ export const hero: HeroData = {
       hrefs: ["/#project-matscan", "/#outreach-undergraduate-teaching-assistant-enae-100"],
     },
     {
-      src: "/11.png",
+      src: "/11.webp",
       alt: "UMD Space Systems Laboratory",
       hrefs: ["/#project-lunar-suit-lighting-system"],
     },
     {
-      src: "/12.png",
+      src: "/12.webp",
       alt: "UMD Balloon Payload Program",
       hrefs: ["/#project-zero-pressure-aerobot"],
     },
     {
-      src: "/13.png",
+      src: "/13.webp",
       alt: "Terraformers, URC Rover Team",
       hrefs: ["/#project-terraformers-urc-rover-team"],
     },
     {
-      src: "/14.jpg",
+      src: "/14.webp",
       alt: "Space Tech Expo USA",
       hrefs: ["/#outreach-conference-panel-moderator"],
     },
