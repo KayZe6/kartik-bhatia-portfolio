@@ -79,8 +79,8 @@ export const caseStudies: CaseStudy[] = [
       title: "Terrapin Works, Advanced Fabrication Lab",
       subtitle: "Additive Manufacturing Technician · University of Maryland · Feb 2026 to Present",
       summary:
-        "Running production across FDM, selective laser sintering, resin, metal binder jetting, and composites printing, plus the metrology that checks whether parts came out to spec. A lot of the job is keeping machines alive.",
-      metric: { value: "12 machines", label: "run across FDM, resin, SLS, metal binder jetting, and composites" },
+        "Running production across FDM, selective laser sintering, resin, Multi Jet Fusion, and composites printing, plus the metrology that checks whether parts came out to spec. A lot of the job is keeping machines alive.",
+      metric: { value: "10 machines", label: "run independently across FDM, resin, SLS, Multi Jet Fusion, and composites" },
       tags: [
         "FDM",
         "SLA",
@@ -110,15 +110,16 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "What I run",
         body: [
-          "Production runs across FDM (Stratasys Fortus 400mc, Bambu Lab X1C and P1S, Prusa Core One, XL, and MK3S), resin (Formlabs Form 4, Nexa XiP), SLS (Formlabs Fuse 1), Multi Jet Fusion (HP Jet Fusion 580), metal binder jetting (Desktop Metal Shop System), and composites on the Markforged Mark Two (continuous carbon-fiber reinforcement for composite parts as strong as machined aluminum). Day to day that is slicing, setup, harvesting parts, and managing customer inventory. On the verification side, dimensional checks and 3D scanning with handheld scanners and the Hexagon ROMER Absolute Arm, working in Geomagic X, confirm parts conform before they go back to whoever ordered them.",
+          "Production runs independently across FDM (Bambu Lab X1C and P1S, Prusa Core One, XL, and MK3S), resin (Formlabs Form 4, Nexa XiP), SLS (Formlabs Fuse 1), Multi Jet Fusion (HP Jet Fusion 580), and composites on the Markforged Mark Two (continuous carbon-fiber reinforcement for composite parts as strong as machined aluminum). Day to day that is slicing, setup, harvesting parts, and managing customer inventory. On the verification side, dimensional checks and 3D scanning with handheld scanners and the Hexagon ROMER Absolute Arm, working in Geomagic X, confirm parts conform before they go back to whoever ordered them.",
+          "Currently in training on two more: the Stratasys Fortus 400mc and the Desktop Metal Shop System, both run under supervision rather than solo.",
         ],
       },
       {
-        heading: "The ongoing repair work",
+        heading: "Training on the Desktop Metal Shop System",
         body: [
-          "The bigger project right now is getting the Desktop Metal Shop System back to reliable operation. It is showing a mix of mechanical and software faults, and the hard part is that they overlap. A sensor or interlock reading wrong halts the machine and looks like hardware failure when the root cause is a bad signal, and a mechanical fault can surface as a software error.",
-          "The approach starts with the fault log: pull the exact error code and timestamp, then reproduce the failure once to see which physical action it dies on. That single observation localizes the subsystem faster than guessing. From there, each suspect subsystem gets isolated and tested on its own before any part is swapped. A recoat-phase failure means checking the blade, roller, and homing switches and confirming the powder is dry and flowing. A jetting failure means a nozzle health check, reseating the printhead data connections, and servicing the capping station. A mid-job abort with no mechanical symptom points at the controller-to-prep-station link or a firmware mismatch. A suspected sensor fault means reseating or replacing the sensor and connector, then recalibrating.",
-          "Testing in isolation before replacing anything is the part that matters. It keeps the work on the actual root cause instead of the symptom, which on a machine with overlapping faults is the difference between fixing it and swapping parts until something changes.",
+          "Training on the Desktop Metal Shop System is happening while the machine is being brought back to reliable operation, which means learning it through its faults. It is showing a mix of mechanical and software problems, and the hard part is that they overlap. A sensor or interlock reading wrong halts the machine and looks like hardware failure when the root cause is a bad signal, and a mechanical fault can surface as a software error.",
+          "The method being learned starts with the fault log: pull the exact error code and timestamp, then reproduce the failure once to see which physical action it dies on. That single observation localizes the subsystem faster than guessing. From there, each suspect subsystem gets isolated and tested on its own before any part is swapped. A recoat-phase failure means checking the blade, roller, and homing switches and confirming the powder is dry and flowing. A jetting failure means a nozzle health check, reseating the printhead data connections, and servicing the capping station. A mid-job abort with no mechanical symptom points at the controller-to-prep-station link or a firmware mismatch. A suspected sensor fault means reseating or replacing the sensor and connector, then recalibrating.",
+          "Working through those faults alongside a senior technician, with the diagnosis checked before anything gets replaced, is the fastest way to learn how the subsystems actually depend on each other. The lesson that keeps repeating: test in isolation before replacing anything, because on a machine with overlapping faults that is the difference between fixing it and swapping parts until something changes.",
         ],
       },
     ],
