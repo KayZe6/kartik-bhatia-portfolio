@@ -67,3 +67,6 @@ Media arrives later. Build with placeholder slots and wire real assets in afterw
 - Explain choices in plain language. The owner is an aerospace engineer, not a web developer.
 - Show the data model and get sign-off before building UI.
 - Build one full case study (VAACE) end-to-end first for review, then batch the rest off the same pattern.
+
+## Workflow
+After making changes, always push the branch, open a pull request, and merge it into main so the change reaches production. Do not stop at pushing the branch.
