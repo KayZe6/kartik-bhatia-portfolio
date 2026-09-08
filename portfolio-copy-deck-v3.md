@@ -228,7 +228,7 @@ Team Lead · UMD Clark School of Engineering · Feb to May 2024
 # S5 — OUTREACH
 
 **Autodesk Design & Make Ambassador** · Sep 2025 to Present
-> Runs outreach through Design & Make pop-up booths, demoing tools, supporting hands-on mini-builds, and answering questions to get more people interested in design. Also pitches to university classes and clubs to drive adoption and pull students into project-based challenges.
+> Run outreach through Design & Make pop-up booths, demoing tools, supporting hands-on mini-builds, and answering questions to get more people interested in design. Also pitch to university classes and clubs to drive adoption and pull students into project-based challenges.
 
 **NASA L.U.C.Y Mission Ambassador** · Sep 2024 to Aug 2025
 > Shared the Lucy mission's story through presentations on campus and around the community, and used LinkedIn to post mission updates and milestones. The goal was making the mission accessible to people who would not otherwise follow it, and that has continued at conferences.

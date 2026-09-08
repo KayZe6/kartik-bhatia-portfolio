@@ -80,7 +80,7 @@ export const caseStudies: CaseStudy[] = [
       subtitle: "Additive Manufacturing Technician · University of Maryland · Feb 2026 to Present",
       summary:
         "Running production across FDM, selective laser sintering, resin, Multi Jet Fusion, and composites printing, plus the metrology that checks whether parts came out to spec. A lot of the job is keeping machines alive.",
-      metric: { value: "10 machines", label: "run independently across FDM, resin, SLS, Multi Jet Fusion, and composites" },
+      metric: { value: "10 machines", label: "run independently" },
       tags: [
         "FDM",
         "SLA",
