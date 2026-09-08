@@ -25,8 +25,12 @@ export function Hero() {
             <SectionNav />
           </Container>
 
+          {/* Not wrapped in Reveal: this block is the LCP element, and a
+              reveal would hold it at opacity 0 until Framer hydrates, which
+              measured as an LCP around 3s on a throttled mobile profile.
+              Reveals below the fold are unaffected. */}
           <div className="flex flex-1 items-center justify-center px-6 text-center">
-            <Reveal className="flex flex-col items-center gap-10 sm:gap-16 lg:gap-20">
+            <div className="flex flex-col items-center gap-10 sm:gap-16 lg:gap-20">
               <p className="text-sm font-medium tracking-[0.3em] text-paper/70 uppercase sm:text-base">
                 {hero.eyebrow}
               </p>
@@ -36,7 +40,7 @@ export function Hero() {
               <p className="max-w-2xl text-lg font-medium text-paper/90 sm:text-2xl">
                 {hero.identityLine}
               </p>
-            </Reveal>
+            </div>
           </div>
         </div>
       </section>

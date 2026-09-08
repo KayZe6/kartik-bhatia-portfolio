@@ -5,6 +5,9 @@ interface MediaPhotoProps {
   aspect?: "video" | "square";
   className?: string;
   showCaption?: boolean;
+  /** Set on an above-the-fold photo: loads it eagerly instead of lazily, since
+      lazy-loading the image that is already on screen only delays LCP. */
+  priority?: boolean;
 }
 
 /**
@@ -12,7 +15,13 @@ interface MediaPhotoProps {
  * covers the same aspect-ratio slot for entries that don't have a photo
  * yet — callers pick between the two based on whether media is present.
  */
-export function MediaPhoto({ media, aspect = "video", className = "", showCaption = false }: MediaPhotoProps) {
+export function MediaPhoto({
+  media,
+  aspect = "video",
+  className = "",
+  showCaption = false,
+  priority = false,
+}: MediaPhotoProps) {
   const aspectClass = aspect === "video" ? "aspect-video" : "aspect-square";
   return (
     <figure className={className}>
@@ -20,7 +29,8 @@ export function MediaPhoto({ media, aspect = "video", className = "", showCaptio
       <img
         src={media.src}
         alt={media.alt}
-        loading="lazy"
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
         className={`w-full ${aspectClass} rounded-lg border border-line object-cover`}
       />
       {showCaption && media.caption && <figcaption className="mt-2 text-sm text-ink-muted">{media.caption}</figcaption>}
